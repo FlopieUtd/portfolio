@@ -318,6 +318,7 @@ a, a:visited, a:active {
 .project-item:hover .project-item__image {
 	-webkit-filter: brightness(.33);
 	        filter: brightness(.33);
+	transform: scale(1.05);
 }
 
 .project-item:hover .project-item__title, .project-item:hover .project-item__description {
@@ -341,6 +342,11 @@ a, a:visited, a:active {
 
 .project-item--4 .project-item__image {
 	background: url(../images/tasks.png) no-repeat center center; 
+	background-size: cover;
+}
+
+.project-item--5 .project-item__image {
+	background: url(../images/mch.jpg) no-repeat center center; 
 	background-size: cover;
 }
 
