@@ -213,7 +213,8 @@ a:active {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 40px;
+  padding: 25px;
+  z-index: 1;
 }
 
 .splash-screen__navigation li {
@@ -518,4 +519,9 @@ a:active {
       width: 75vw;
     }
   }
+}
+
+::selection {
+  background-color: pink;
+  color: black;
 }
