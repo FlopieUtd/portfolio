@@ -5,9 +5,9 @@ const center = document.querySelector(".center");
 
 const num = Math.floor(Math.random() * 3) + 1;
 
-back.style.background = `url(./images/background-${num}/back.jpg) no-repeat center center`;
-middle.style.background = `url(./images/background-${num}/middle.png) no-repeat center center`;
-front.style.background = `url(./images/background-${num}/front.png) no-repeat center center`;
+back.style.background = `url(./images/background-${num}/back.jpg) center center / cover repeat`;
+middle.style.background = `url(./images/background-${num}/middle.png) center center / cover repeat`;
+front.style.background = `url(./images/background-${num}/front.png) center center / cover repeat`;
 
 const navLinks = document.querySelectorAll(".splash-screen__navigation > li");
 for (let i = 0; i < navLinks.length; i++) {

@@ -256,6 +256,7 @@ a:active {
   color: rgba(255, 255, 255, 0.5);
   font-weight: normal;
   font-size: 1rem;
+  z-index: 1;
 }
 
 .splash-screen__credits a {
