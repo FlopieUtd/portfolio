@@ -180,6 +180,7 @@ a:active {
   position: absolute;
   transition: all 0.4s;
   z-index: 1;
+  pointer-events: none;
 }
 
 /* The typing effect */
