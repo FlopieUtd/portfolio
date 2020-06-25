@@ -430,6 +430,11 @@ a:active {
   background-size: cover;
 }
 
+.project-item--7 .project-item__image {
+  background: url(../images/tower-defense.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 /* Contact */
 
 .grid--contact {
