@@ -6,17 +6,27 @@ const white = document.querySelector(".splash-screen__white");
 
 const num = Math.floor(Math.random() * 3) + 1;
 
-back.style.background = `url(./images/background-${num}/back.jpg) center center / cover repeat`;
+const url1 = `./images/background-${num}/back.jpg`;
+const url2 = `./images/background-${num}/middle.png`;
+const url3 = `./images/background-${num}/front.png`;
 
-const url = `./images/background-${num}/back.jpg`;
-const img = new Image();
-img.onload = () => {
-  white.style.opacity = 0;
-  middle.style.background = `url(./images/background-${num}/middle.png) center center / cover repeat`;
-  front.style.background = `url(./images/background-${num}/front.png) center center / cover repeat`;
-};
-img.src = url;
-if (img.complete) img.onload();
+back.style.background = `url(${url1}) center center / cover repeat`;
+middle.style.background = `url(${url2}) center center / cover repeat`;
+front.style.background = `url(${url3}) center center / cover repeat`;
+
+let ready = 0;
+
+[url1, url2, url3].forEach((url) => {
+  const img = new Image();
+  img.onload = () => {
+    ready += 1;
+    if (ready === 3) {
+      white.style.opacity = 0;
+    }
+  };
+  img.src = url;
+  if (img.complete) img.onload();
+});
 
 const navLinks = document.querySelectorAll(".splash-screen__navigation > li");
 for (let i = 0; i < navLinks.length; i++) {
